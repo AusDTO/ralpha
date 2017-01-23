@@ -17,8 +17,8 @@ from day one.
 All you need to get up and running is Git, Node and Yarn.
 
 ```
-git clone https://github.com/AusDTO/ralpha
-cd ralpha
+git clone https://github.com/AusDTO/ralpha <your-project-name>
+cd <your-project-name>
 yarn install
 ```
 
@@ -28,7 +28,14 @@ To run:
 yarn start
 ```
 
-To deploy (assuming you have CloudFoundry set up and configured):
+To push:
+
+```
+git remote set-url origin https://github.com/AusDTO/<your-project-name>
+git push -u origin master
+```
+
+To deploy (once you have CloudFoundry set up and configured):
 
 ```
 yarn deploy
