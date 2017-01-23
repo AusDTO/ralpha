@@ -1,0 +1,30 @@
+{
+  "name": "ralpha",
+  "version": "0.1.0",
+  "description": "Starter kit for scaffolding out new opinionated React projects",
+  "main": "index.js",
+  "repository": "https://github.com/AusDTO/ralpha",
+  "author": "Jonathan Conway <jonathan.conway@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "react-scripts": "0.8.5"
+  },
+  "dependencies": {
+    "gov-au-ui-kit": "https://github.com/AusDTO/gov-au-ui-kit.git",
+    "node-sass": "^4.3.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "scripts": {
+    "start": "npm run style && concurrently --kill-others 'npm run style -- -w' 'react-scripts start'",
+    "style": "node-sass --include-path=./node_modules src/index.scss -o src",
+    "build": "npm run style && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && cf push"
+  },
+  "engines": {
+    "node": "6.9.4"
+  }
+}
