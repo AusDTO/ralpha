@@ -1,2 +1,11 @@
 $gov-ui-kit-image-base-url: "https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/img/";
 @import "./node_modules/gov-au-ui-kit/assets/sass/ui-kit";
+
+/*
+ * Overrides to UI-KIT that are not specific to a component
+ */
+
+/* Fix padding bug caused by nesting main in body */
+main {
+  padding: 0;
+}
